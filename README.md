@@ -45,8 +45,8 @@ O sistema gerenciará:
 
 ### **1.3. Definições, Acrônimos e Abreviações**
 
-- **Máquina**:
-- **Peça**:
+- **Máquina**: toatal de 80 computadores sendo 20 em cada labin os labis são 4 também e 20 notebooks.
+- **Peça**:teclados, mouses, monitor e gabinetes, fonte de alimentação dos notebooks.
 - **Conserto**:
 - **Inventário**:
 
