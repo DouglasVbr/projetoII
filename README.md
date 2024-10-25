@@ -4,7 +4,7 @@
 
 ---
 
-*Prof: Éder Oliveira de Rosso*
+
 
 ---
 
@@ -20,7 +20,7 @@ Construa um [README.md](http://README.md) no projeto do GitHub com as informaç�
 
 **Data**: 24/10/2024
 
-**Responsável**: 
+**Responsável**: Douglas Vieira
 
 ---
 
