@@ -1,5 +1,11 @@
 # projetoII
 
+
+# diagrama conceitual 
+
+
+![conceitualdiagrama](https://github.com/user-attachments/assets/660b8f12-a5df-4b02-8baa-8b5bb02b4102)
+
 # Passos para o desenvolvimento do projeto
 
 ---
