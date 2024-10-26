@@ -1,4 +1,7 @@
 ## Gerenciador de Hardware para Laboratórios
+
+## diagrama conceitual 
+![conceitualdiagrama](https://github.com/user-attachments/assets/660b8f12-a5df-4b02-8baa-8b5bb02b4102)
 ## Introdução
 O Gerenciador de Hardware para Laboratórios é um sistema desenvolvido em Java que permite o controle e monitoramento de máquinas, consertos, peças trocadas e inventário de componentes em laboratórios de informática. O projeto visa facilitar a gestão de manutenções, controle de peças e acompanhamento do estado das máquinas.
 
