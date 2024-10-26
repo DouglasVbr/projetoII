@@ -1,5 +1,13 @@
 ## Gerenciador de Hardware para Laboratórios
 
+## Participantes
+
+| [<img src="https://avatars.githubusercontent.com/u/130025057?s=400&u=f96f391fe5b875750f59ae9e4f601eaed19b9a33&v=4" width="75px"/>](https://github.com/DouglasVbr ) |
+| :------------------------------------------------------------------------------------------------------------------------: |
+
+
+| [Douglas Vieira](https://github.com/DouglasVbr) 
+
 ## diagrama conceitual 
 ![conceitualdiagrama](https://github.com/user-attachments/assets/660b8f12-a5df-4b02-8baa-8b5bb02b4102)
 ## Introdução
