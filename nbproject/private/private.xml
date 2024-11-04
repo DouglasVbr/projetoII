@@ -3,31 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/aluno.saolucas/Desktop/projetoII/src/DAO/MaquinaDAO.java</file>
-            <file>file:/C:/Users/aluno.saolucas/Desktop/projetoII/src/View/Manutencao.java</file>
-            <file>file:/C:/Users/aluno.saolucas/Desktop/projetoII/src/View/UsuarioView.java</file>
-            <file>file:/C:/Users/aluno.saolucas/Desktop/projetoII/src/DTO/LaboratorioDTO.java</file>
-            <file>file:/C:/Users/aluno.saolucas/Desktop/projetoII/src/DAO/EquipamentoDAO.java</file>
-            <file>file:/C:/Users/aluno.saolucas/Desktop/projetoII/src/DAO/UsuarioDAO.java</file>
-            <file>file:/C:/Users/aluno.saolucas/Desktop/projetoII/src/DAO/ManutencaoDAO.java</file>
-            <file>file:/C:/Users/aluno.saolucas/Desktop/projetoII/src/DTO/ConsertoDTO.java</file>
-            <file>file:/C:/Users/aluno.saolucas/Desktop/projetoII/src/DAO/ConexaoDAO.java</file>
-            <file>file:/C:/Users/aluno.saolucas/Desktop/projetoII/src/DAO/HistoricoDAO.java</file>
-            <file>file:/C:/Users/aluno.saolucas/Desktop/projetoII/src/DTO/HistoricoDTO.java</file>
-            <file>file:/C:/Users/aluno.saolucas/Desktop/projetoII/src/DTO/MaquinaDTO.java</file>
-            <file>file:/C:/Users/aluno.saolucas/Desktop/projetoII/src/View/Pecas.java</file>
-            <file>file:/C:/Users/aluno.saolucas/Desktop/projetoII/src/DTO/UsuarioDTO.java</file>
-            <file>file:/C:/Users/aluno.saolucas/Desktop/projetoII/src/DTO/Manutencao.java</file>
-            <file>file:/C:/Users/aluno.saolucas/Desktop/projetoII/src/View/Login.java</file>
-            <file>file:/C:/Users/aluno.saolucas/Desktop/projetoII/src/View/MaquinasView.java</file>
-            <file>file:/C:/Users/aluno.saolucas/Desktop/projetoII/src/DAO/LaboratorioDAO.java</file>
-            <file>file:/C:/Users/aluno.saolucas/Desktop/projetoII/src/View/Equipamento.java</file>
-            <file>file:/C:/Users/aluno.saolucas/Desktop/projetoII/src/View/PrincipalView.java</file>
-            <file>file:/C:/Users/aluno.saolucas/Desktop/projetoII/src/DTO/PecaDTO.java</file>
-            <file>file:/C:/Users/aluno.saolucas/Desktop/projetoII/src/DTO/EquipamentoDTO.java</file>
-            <file>file:/C:/Users/aluno.saolucas/Desktop/projetoII/src/DAO/PecaDAO.java</file>
-            <file>file:/C:/Users/aluno.saolucas/Desktop/projetoII/src/DAO/ConsertoDAO.java</file>
-            <file>file:/C:/Users/aluno.saolucas/Desktop/projetoII/src/View/Laboratorio.java</file>
+            <file>file:/C:/Users/Joel/Desktop/POO2/gerenciador_hardware/src/DAO/MaquinaDAO.java</file>
+            <file>file:/C:/Users/Joel/Desktop/POO2/gerenciador_hardware/src/View/CadastroMaquinasView.java</file>
+            <file>file:/C:/Users/Joel/Desktop/POO2/gerenciador_hardware/src/View/TelaPrincipalView.java</file>
+            <file>file:/C:/Users/Joel/Desktop/POO2/gerenciador_hardware/src/View/UsuarioView.java</file>
+            <file>file:/C:/Users/Joel/Desktop/POO2/gerenciador_hardware/src/View/AssociarPecaManutencaoView.java</file>
+            <file>file:/C:/Users/Joel/Desktop/POO2/gerenciador_hardware/src/View/RelatoriosView.java</file>
+            <file>file:/C:/Users/Joel/Desktop/POO2/gerenciador_hardware/src/View/LoginView.java</file>
+            <file>file:/C:/Users/Joel/Desktop/POO2/gerenciador_hardware/src/View/CadastroPecaView.java</file>
+            <file>file:/C:/Users/Joel/Desktop/POO2/gerenciador_hardware/src/View/ManutencaoMaquinaView.java</file>
+            <file>file:/C:/Users/Joel/Desktop/POO2/gerenciador_hardware/src/DAO/ConexaoDAO.java</file>
+            <file>file:/C:/Users/Joel/Desktop/POO2/gerenciador_hardware/src/DAO/UsuarioDAO.java</file>
+            <file>file:/C:/Users/Joel/Desktop/POO2/gerenciador_hardware/src/View/CadastroLabinView.java</file>
         </group>
     </open-files>
 </project-private>
