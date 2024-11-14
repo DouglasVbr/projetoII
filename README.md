@@ -1,4 +1,8 @@
 ### Gerenciador de Hardware para Laboratórios
+
+## integrantes: 
+![euDouglas](https://github.com/user-attachments/assets/2f78d7f1-296c-457b-9fd5-44c4d9c27ab6)
+
 ## Descrição
 ## O Gerenciador de Hardware para Laboratórios é um sistema destinado ao controle, monitoramento e manutenção de máquinas de laboratórios de hardware. Ele integra funcionalidades de inventário, controle de manutenção e peças trocadas, permitindo o gerenciamento eficaz de múltiplos laboratórios e garantindo que todas as máquinas e componentes estejam sempre em bom estado de funcionamento.
 
