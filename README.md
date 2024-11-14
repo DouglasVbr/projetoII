@@ -319,6 +319,11 @@ VALUES
 ![modeloconceitual](https://github.com/user-attachments/assets/d8c36d5f-887e-497b-ae9f-98337cee6f95)
 
 
+## modelo logico 
+![modeloLogico](https://github.com/user-attachments/assets/22a05eb8-2519-4084-918b-d9402a3a581a)
+
+
+
 
 
 
