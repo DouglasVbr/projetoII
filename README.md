@@ -314,7 +314,9 @@ VALUES
 (3, 1, 3);  -- 3 peças com id_peca = 1 usadas na manutenção com id_manutencao = 3
 
 
+## modelo conceitual 
 
+![modeloconceitual](https://github.com/user-attachments/assets/d8c36d5f-887e-497b-ae9f-98337cee6f95)
 
 
 
