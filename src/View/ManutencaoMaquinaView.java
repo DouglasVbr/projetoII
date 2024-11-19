@@ -239,6 +239,7 @@ public class ManutencaoMaquinaView extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtIDManutencaoMaquinasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIDManutencaoMaquinasActionPerformed
@@ -266,7 +267,7 @@ public class ManutencaoMaquinaView extends javax.swing.JFrame {
     }//GEN-LAST:event_txtDataManutencaoActionPerformed
 
     private void btnCriarManutencaoMaquinasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCriarManutencaoMaquinasActionPerformed
-        String idMaquina = txtIDMaquinasManutencao.getText();
+    String idMaquina = txtIDMaquinasManutencao.getText();
     String idManutencao = txtIDManutencaoMaquinas.getText();
     String tipoProblema = (String) txtTipoDProblema.getSelectedItem();
     String descricaoProblema = txtDescricaoDProblema.getText();
@@ -279,20 +280,79 @@ public class ManutencaoMaquinaView extends javax.swing.JFrame {
         "\nID Máquina: " + idMaquina +
         "\nTipo de Problema: " + tipoProblema +
         "\nData da Manutenção: " + dataManutencao);
+    
+    limparCampos();
     }//GEN-LAST:event_btnCriarManutencaoMaquinasActionPerformed
 
     private void btnLerManutencaoMaquinasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLerManutencaoMaquinasActionPerformed
-        JOptionPane.showMessageDialog(this, "Exibindo os dados da manutenção...");
+        String idMaquina = txtIDMaquinasManutencao.getText();
+    String idManutencao = txtIDManutencaoMaquinas.getText();
+    String tipoProblema = (String) txtTipoDProblema.getSelectedItem();
+    String descricaoProblema = txtDescricaoDProblema.getText();
+    String descricaoSolucao = txtDescricaoSolucaoProblema.getText();
+    String dataManutencao = txtDataManutencao.getText();
+
+    
+    JOptionPane.showMessageDialog(this, "Exibindo os dados da manutenção...\n" +
+        "ID Manutenção: " + idManutencao +
+        "\nID Máquina: " + idMaquina +
+        "\nTipo de Problema: " + tipoProblema +
+        "\nData da Manutenção: " + dataManutencao);
+        
+        
+        
+       
+        
+        limparCampos();
     }//GEN-LAST:event_btnLerManutencaoMaquinasActionPerformed
 
     private void btnAtualizarManutencaoMaquinasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtualizarManutencaoMaquinasActionPerformed
-        JOptionPane.showMessageDialog(this, "Manutenção atualizada com sucesso!");
+       String idMaquina = txtIDMaquinasManutencao.getText();
+    String idManutencao = txtIDManutencaoMaquinas.getText();
+    String tipoProblema = (String) txtTipoDProblema.getSelectedItem();
+    String descricaoProblema = txtDescricaoDProblema.getText();
+    String descricaoSolucao = txtDescricaoSolucaoProblema.getText();
+    String dataManutencao = txtDataManutencao.getText();
+
+    
+    JOptionPane.showMessageDialog(this, "Manutenção atualizada com sucesso!\n" +
+        "ID Manutenção: " + idManutencao +
+        "\nID Máquina: " + idMaquina +
+        "\nTipo de Problema: " + tipoProblema +
+        "\nData da Manutenção: " + dataManutencao);
+        
+        
+        limparCampos();
     }//GEN-LAST:event_btnAtualizarManutencaoMaquinasActionPerformed
 
     private void btnExcluirManutencaoMaquinasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirManutencaoMaquinasActionPerformed
-        JOptionPane.showMessageDialog(this, "Manutenção excluída com sucesso!");
+        
+        String idMaquina = txtIDMaquinasManutencao.getText();
+    String idManutencao = txtIDManutencaoMaquinas.getText();
+    String tipoProblema = (String) txtTipoDProblema.getSelectedItem();
+    String descricaoProblema = txtDescricaoDProblema.getText();
+    String descricaoSolucao = txtDescricaoSolucaoProblema.getText();
+    String dataManutencao = txtDataManutencao.getText();
+
+    
+    JOptionPane.showMessageDialog(this, "Manutenção excluída com sucesso!\n" +
+        "ID Manutenção: " + idManutencao +
+        "\nID Máquina: " + idMaquina +
+        "\nTipo de Problema: " + tipoProblema +
+        "\nData da Manutenção: " + dataManutencao);
+        
+        
+        limparCampos();
     }//GEN-LAST:event_btnExcluirManutencaoMaquinasActionPerformed
 
+    private void limparCampos(){
+    txtDataManutencao.setText("");
+    txtDescricaoDProblema.setText("");
+    txtDescricaoSolucaoProblema.setText("");
+    txtIDManutencaoMaquinas.setText("");
+    txtIDMaquinasManutencao.setText("");
+    }
+    
     /**
      * @param args the command line arguments
      */

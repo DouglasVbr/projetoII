@@ -5,6 +5,8 @@
  */
 package View;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Joel
@@ -47,18 +49,59 @@ public class CadastroPecaView extends javax.swing.JFrame {
         jLabel3.setText("TIPO DE PEÇA");
 
         txtTipoDPecas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ESCOLHER", "Memória RAM", "Processador", "HD", "Fonte", "Placa Mãe" }));
+        txtTipoDPecas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTipoDPecasActionPerformed(evt);
+            }
+        });
+
+        txtQTDPecas.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                txtQTDPecasAncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+
+        txtIDPecas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtIDPecasActionPerformed(evt);
+            }
+        });
 
         btnCriarPecas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/aba.png"))); // NOI18N
         btnCriarPecas.setText("CRIAR");
+        btnCriarPecas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCriarPecasActionPerformed(evt);
+            }
+        });
 
         btnLerPecas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/livro.png"))); // NOI18N
         btnLerPecas.setText("LER");
+        btnLerPecas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLerPecasActionPerformed(evt);
+            }
+        });
 
         btnAtualizarPecas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/atualizada.png"))); // NOI18N
         btnAtualizarPecas.setText("ATUALIZAR");
+        btnAtualizarPecas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAtualizarPecasActionPerformed(evt);
+            }
+        });
 
         btnExcluirPecas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/excluir.png"))); // NOI18N
         btnExcluirPecas.setText("EXCLUIR");
+        btnExcluirPecas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExcluirPecasActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -117,8 +160,91 @@ public class CadastroPecaView extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void txtIDPecasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIDPecasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtIDPecasActionPerformed
+
+    private void txtTipoDPecasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTipoDPecasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTipoDPecasActionPerformed
+
+    private void txtQTDPecasAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_txtQTDPecasAncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtQTDPecasAncestorAdded
+
+    private void btnCriarPecasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCriarPecasActionPerformed
+        // TODO add your handling code here:
+        
+        String idPecas = txtIDPecas.getText();
+         String TipoDPecas = txtTipoDPecas.getActionCommand();
+         int qtdpecas = (int) txtQTDPecas.getValue();
+        
+       
+       JOptionPane.showMessageDialog(this, "Peça criada com Sucesso!\n" +
+        "ID     Peça: " + idPecas +
+        "\nTipo Peça: " + TipoDPecas +
+        "\nQuantidade De Peças: " + qtdpecas );
+       
+       limparCampos();
+    }//GEN-LAST:event_btnCriarPecasActionPerformed
+
+    private void btnLerPecasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLerPecasActionPerformed
+         String idPecas = txtIDPecas.getText();
+         String TipoDPecas = txtTipoDPecas.getActionCommand();
+         int qtdpecas = (int) txtQTDPecas.getValue();
+        
+       
+       JOptionPane.showMessageDialog(this, "Peça criada com Sucesso!\n" +
+        "ID     Peça: " + idPecas +
+        "\nTipo Peça: " + TipoDPecas +
+        "\nQuantidade De Peças: " + qtdpecas );
+       
+       limparCampos();
+    }//GEN-LAST:event_btnLerPecasActionPerformed
+
+    private void btnAtualizarPecasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtualizarPecasActionPerformed
+        // TODO add your handling code here:
+        
+        String idPecas = txtIDPecas.getText();
+         String TipoDPecas = txtTipoDPecas.getActionCommand();
+         int qtdpecas = (int) txtQTDPecas.getValue();
+        
+       
+       JOptionPane.showMessageDialog(this, "Peça criada com Sucesso!\n" +
+        "ID     Peça: " + idPecas +
+        "\nTipo Peça: " + TipoDPecas +
+        "\nQuantidade De Peças: " + qtdpecas );
+       
+       limparCampos();
+    }//GEN-LAST:event_btnAtualizarPecasActionPerformed
+
+    private void btnExcluirPecasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirPecasActionPerformed
+        // TODO add your handling code here:
+        
+        String idPecas = txtIDPecas.getText();
+         String TipoDPecas = txtTipoDPecas.getActionCommand();
+         int qtdpecas = (int) txtQTDPecas.getValue();
+        
+       
+       JOptionPane.showMessageDialog(this, "Peça criada com Sucesso!\n" +
+        "ID     Peça: " + idPecas +
+        "\nTipo Peça: " + TipoDPecas +
+        "\nQuantidade De Peças: " + qtdpecas );
+       
+       limparCampos();
+    }//GEN-LAST:event_btnExcluirPecasActionPerformed
+
+     
+    private void limparCampos(){
+    txtIDPecas.setText("");
+    
+    
+    
+    }
+    
     /**
      * @param args the command line arguments
      */

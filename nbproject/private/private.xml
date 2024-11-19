@@ -3,18 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Joel/Desktop/POO2/gerenciador_hardware/src/DAO/MaquinaDAO.java</file>
-            <file>file:/C:/Users/Joel/Desktop/POO2/gerenciador_hardware/src/View/CadastroMaquinasView.java</file>
-            <file>file:/C:/Users/Joel/Desktop/POO2/gerenciador_hardware/src/View/TelaPrincipalView.java</file>
-            <file>file:/C:/Users/Joel/Desktop/POO2/gerenciador_hardware/src/View/UsuarioView.java</file>
-            <file>file:/C:/Users/Joel/Desktop/POO2/gerenciador_hardware/src/View/AssociarPecaManutencaoView.java</file>
-            <file>file:/C:/Users/Joel/Desktop/POO2/gerenciador_hardware/src/View/RelatoriosView.java</file>
-            <file>file:/C:/Users/Joel/Desktop/POO2/gerenciador_hardware/src/View/LoginView.java</file>
-            <file>file:/C:/Users/Joel/Desktop/POO2/gerenciador_hardware/src/View/CadastroPecaView.java</file>
-            <file>file:/C:/Users/Joel/Desktop/POO2/gerenciador_hardware/src/View/ManutencaoMaquinaView.java</file>
-            <file>file:/C:/Users/Joel/Desktop/POO2/gerenciador_hardware/src/DAO/ConexaoDAO.java</file>
-            <file>file:/C:/Users/Joel/Desktop/POO2/gerenciador_hardware/src/DAO/UsuarioDAO.java</file>
-            <file>file:/C:/Users/Joel/Desktop/POO2/gerenciador_hardware/src/View/CadastroLabinView.java</file>
+            <file>file:/C:/Users/Aluno.saolucas/Desktop/ProjetoII/projetoII/src/View/ManutencaoMaquinaView.java</file>
+            <file>file:/C:/Users/Aluno.saolucas/Desktop/ProjetoII/projetoII/src/View/AssociarPecaManutencaoView.java</file>
+            <file>file:/C:/Users/Aluno.saolucas/Desktop/ProjetoII/projetoII/src/View/TelaPrincipalView.java</file>
+            <file>file:/C:/Users/Aluno.saolucas/Desktop/ProjetoII/projetoII/src/View/RelatoriosView.java</file>
         </group>
     </open-files>
 </project-private>

@@ -5,7 +5,12 @@
  */
 package View;
 
+import DAO.MaquinaDAO;
+import DTO.MaquinaDTO;
+import java.util.List;
 import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 
 /**
  *
@@ -13,11 +18,17 @@ import javax.swing.JOptionPane;
  */
 public class CadastroMaquinasView extends javax.swing.JFrame {
 
+    private MaquinaDAO maquinaDAO;
+    //private JTextArea ListaDeMaquinasCadastradas;
     /**
      * Creates new form CadastroMaquinasView
      */
     public CadastroMaquinasView() {
         initComponents();
+        
+         //ListaDeMaquinasCadastradas = new JTextArea(20, 40);
+         ListaDeMaquinasCadastradas.setEditable(false);
+         add(new JScrollPane(ListaDeMaquinasCadastradas)); // Inicialize o DAO maquinaDAO = new MaquinaDAO(); // Listar e exibir máquinas listarEExibirMaquinas();
     }
 
     /**
@@ -261,35 +272,67 @@ public class CadastroMaquinasView extends javax.swing.JFrame {
     }//GEN-LAST:event_txtCPUMaquinaActionPerformed
 
     private void ListaDeMaquinasCadastradasAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_ListaDeMaquinasCadastradasAncestorAdded
-       // Exemplo de método para atualizar a lista de máquinas
-
-    // Aqui você pode obter a lista de máquinas cadastradas do banco de dados ou de uma lista local
-    String listaMaquinas = "ID: 1 - CPU: Intel - RAM: 8GB\n"; // Exemplo de dados fictícios
-    listaMaquinas += "ID: 2 - CPU: AMD - RAM: 16GB\n"; // Continue para adicionar mais dados
-    
-    ListaDeMaquinasCadastradas.setText(listaMaquinas);
+       List<MaquinaDTO> maquinas = maquinaDAO.listarMaquinas();
+       for (MaquinaDTO maquina : maquinas) {
+           ListaDeMaquinasCadastradas.setName("ID: " + maquina.getIdMaquina()
+                   + "\nNúmero de Série: " +
+                   maquina.getNumeroSerie() + 
+                   "\nEspecificações: " +
+                   maquina.getEspecificacoes() +
+                   "\nData de Aquisição: " +
+                   maquina.getDataAquisicao() +
+                   "\nLocalização: " +
+                   maquina.getLocalizacao() +
+                   "\nStatus: " + maquina.getStatus() +
+                   "\n\n" ); } 
+       
+       limparCampos();
 
 
     }//GEN-LAST:event_ListaDeMaquinasCadastradasAncestorAdded
 
     private void btnCriarMaquinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCriarMaquinaActionPerformed
-         String idMaquina = txtIDMaquina.getText();
+    String idMaquina = txtIDMaquina.getText();
     String idLaboratorio = txtIDLaboratorio.getText();
     String armazenamento = txtArmazenamentoMaquina.getText();
     String cpu = txtCPUMaquina.getText();
     String ram = txtRamMaquina.getText();
 
-    // Adicione aqui a lógica para criar e salvar a máquina no banco de dados ou na lista
-    // Exemplo de exibição de mensagem:
-    JOptionPane.showMessageDialog(this, "Máquina criada com sucesso!");
+    
+    JOptionPane.showMessageDialog(this,
+            "Máquina criada com sucesso!\n" +
+                    "ID da Máquina: " +
+                    idMaquina + "\n" +
+                            "Laboratório: " +
+                    idLaboratorio + "\n" +
+                            "Armazenamento: " + 
+                    armazenamento + "\n" +
+                            "CPC: " + cpu + 
+                    "\n" + "RAM: " + ram );
+    
+    limparCampos();
     }//GEN-LAST:event_btnCriarMaquinaActionPerformed
 
     private void btnLerMaquinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLerMaquinaActionPerformed
-        String idMaquina = txtIDMaquina.getText();
+       String idMaquina = txtIDMaquina.getText();
+    String idLaboratorio = txtIDLaboratorio.getText();
+    String armazenamento = txtArmazenamentoMaquina.getText();
+    String cpu = txtCPUMaquina.getText();
+    String ram = txtRamMaquina.getText();
 
-    // Adicione aqui a lógica para buscar a máquina no banco de dados ou na lista usando o ID
-    // Exemplo fictício de exibição:
-    JOptionPane.showMessageDialog(this, "Máquina ID: " + idMaquina + " encontrada.");
+    
+    JOptionPane.showMessageDialog(this,
+            "Aqui está \n" +
+                    "ID da Máquina: " +
+                    idMaquina + "\n" +
+                            "Laboratório: " +
+                    idLaboratorio + "\n" +
+                            "Armazenamento: " + 
+                    armazenamento + "\n" +
+                            "CPC: " + cpu + 
+                    "\n" + "RAM: " + ram );
+    
+    limparCampos();
     }//GEN-LAST:event_btnLerMaquinaActionPerformed
 
     private void btnAtualizarMaquinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtualizarMaquinaActionPerformed
@@ -299,17 +342,51 @@ public class CadastroMaquinasView extends javax.swing.JFrame {
     String cpu = txtCPUMaquina.getText();
     String ram = txtRamMaquina.getText();
 
-    // Adicione aqui a lógica para atualizar a máquina no banco de dados ou na lista
-    JOptionPane.showMessageDialog(this, "Máquina atualizada com sucesso!");
+    
+    JOptionPane.showMessageDialog(this,
+            "Máquina Atualizada com Sucesso!\n" +
+                    "ID da Máquina: " +
+                    idMaquina + "\n" +
+                            "Laboratório: " +
+                    idLaboratorio + "\n" +
+                            "Armazenamento: " + 
+                    armazenamento + "\n" +
+                            "CPC: " + cpu + 
+                    "\n" + "RAM: " + ram );
+    
+    limparCampos();
     }//GEN-LAST:event_btnAtualizarMaquinaActionPerformed
 
     private void btnExcluirMaquinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirMaquinaActionPerformed
         String idMaquina = txtIDMaquina.getText();
+    String idLaboratorio = txtIDLaboratorio.getText();
+    String armazenamento = txtArmazenamentoMaquina.getText();
+    String cpu = txtCPUMaquina.getText();
+    String ram = txtRamMaquina.getText();
 
-    // Adicione aqui a lógica para excluir a máquina do banco de dados ou da lista
-    JOptionPane.showMessageDialog(this, "Máquina excluída com sucesso!");
+    
+    JOptionPane.showMessageDialog(this,
+            "Máquina Excluida com sucesso!\n" +
+                    "ID da Máquina: " +
+                    idMaquina + "\n" +
+                            "Laboratório: " +
+                    idLaboratorio + "\n" +
+                            "Armazenamento: " + 
+                    armazenamento + "\n" +
+                            "CPC: " + cpu + 
+                    "\n" + "RAM: " + ram );
+    limparCampos();
     }//GEN-LAST:event_btnExcluirMaquinaActionPerformed
 
+    private void limparCampos(){
+    txtArmazenamentoMaquina.setText("");
+    txtCPUMaquina.setText("");
+    txtIDLaboratorio.setText("");
+    txtIDMaquina.setText("");
+    txtRamMaquina.setText("");
+    }
+    
+    
     /**
      * @param args the command line arguments
      */

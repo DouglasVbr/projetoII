@@ -196,7 +196,24 @@ public class LoginView extends javax.swing.JFrame {
     }
     
     private void PainelLoginViewAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_PainelLoginViewAncestorAdded
-        // TODO add your handling code here:
+        
+                                                      
+    // Obter o tamanho da tela
+    java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
+
+    // Obter o tamanho da janela
+    java.awt.Dimension frameSize = this.getSize();
+
+    // Calcular a posição central
+    int x = (screenSize.width - frameSize.width) / 2;
+    int y = (screenSize.height - frameSize.height) / 2;
+
+    // Definir a localização da janela
+    this.setLocation(x, y);
+ 
+
+        
+        
     }//GEN-LAST:event_PainelLoginViewAncestorAdded
 
     /**

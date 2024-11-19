@@ -6,7 +6,7 @@
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
-    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
   </SyntheticProperties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
@@ -96,10 +96,19 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtNomeDaPeca">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNomeDaPecaActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtIDDaPeca">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtIDDaPecaActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JSpinner" name="QTDPeca">
+      <Events>
+        <EventHandler event="ancestorAdded" listener="javax.swing.event.AncestorListener" parameters="javax.swing.event.AncestorEvent" handler="QTDPecaAncestorAdded"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnCriarPecas">
       <Properties>
@@ -108,6 +117,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="CRIAR"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCriarPecasActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnLerPecas">
       <Properties>
@@ -116,6 +128,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="LER"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLerPecasActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnAtualizarPecas">
       <Properties>
@@ -124,6 +139,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="ATUALIZAR"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAtualizarPecasActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnExcluirPecas">
       <Properties>
@@ -132,6 +150,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="EXCLUIR"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnExcluirPecasActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

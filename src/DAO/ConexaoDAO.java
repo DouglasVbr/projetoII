@@ -10,7 +10,7 @@ public class ConexaoDAO {
     // Configurações do banco de dados
     private static final String DB_URL = "jdbc:mysql://localhost:3306/gerenciador_hardware"; 
     private static final String USER = "root"; 
-    private static final String PASSWORD = ""; 
+    private static final String PASSWORD = "root"; 
 
     // Método para obter conexão com o banco de dados
     public static Connection getConnection() {

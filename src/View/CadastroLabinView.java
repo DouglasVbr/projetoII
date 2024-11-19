@@ -5,6 +5,8 @@
  */
 package View;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Joel
@@ -42,17 +44,55 @@ public class CadastroLabinView extends javax.swing.JFrame {
 
         jLabel3.setText("Local Laborátorio");
 
+        txtIDLabin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtIDLabinActionPerformed(evt);
+            }
+        });
+
+        txtNomeLabin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNomeLabinActionPerformed(evt);
+            }
+        });
+
+        txtLocalLabin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtLocalLabinActionPerformed(evt);
+            }
+        });
+
         btnCriarLabin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/aba.png"))); // NOI18N
         btnCriarLabin.setText("CRIAR");
+        btnCriarLabin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCriarLabinActionPerformed(evt);
+            }
+        });
 
         btnLerLabin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/livro.png"))); // NOI18N
         btnLerLabin.setText("LER");
+        btnLerLabin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLerLabinActionPerformed(evt);
+            }
+        });
 
         btnAtualizarLabin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/atualizada.png"))); // NOI18N
         btnAtualizarLabin.setText("ATUALIZAR");
+        btnAtualizarLabin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAtualizarLabinActionPerformed(evt);
+            }
+        });
 
         btnExcluirLabin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/excluir.png"))); // NOI18N
         btnExcluirLabin.setText("EXCLUIR");
+        btnExcluirLabin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExcluirLabinActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -110,8 +150,97 @@ public class CadastroLabinView extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void txtIDLabinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIDLabinActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtIDLabinActionPerformed
+
+    private void txtNomeLabinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeLabinActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNomeLabinActionPerformed
+
+    private void txtLocalLabinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLocalLabinActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtLocalLabinActionPerformed
+
+    private void btnCriarLabinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCriarLabinActionPerformed
+      String idLabin = txtIDLabin.getText();
+      String NomeLabin = txtNomeLabin.getText();
+       String LocalLabin = txtLocalLabin.getText();
+        
+       
+       JOptionPane.showMessageDialog(this, "Laboratorio criado com Sucesso!\n" +
+        "ID Labin: " + idLabin +
+        "\nNome Labin: " + NomeLabin +
+        "\nLocal Labin: " + LocalLabin );
+       
+       limparCampos();
+
+    }//GEN-LAST:event_btnCriarLabinActionPerformed
+
+    private void btnLerLabinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLerLabinActionPerformed
+        // TODO add your handling code here:
+         String idLabin = txtIDLabin.getText();
+      String NomeLabin = txtNomeLabin.getText();
+       String LocalLabin = txtLocalLabin.getText();
+        
+       
+       JOptionPane.showMessageDialog(this, "Laboratorio criado com Sucesso!\n" +
+        "ID Labin: " + idLabin +
+        "\nNome Labin: " + NomeLabin +
+        "\nLocal Labin: " + LocalLabin );
+       
+       limparCampos();
+
+        
+        
+        
+    }//GEN-LAST:event_btnLerLabinActionPerformed
+
+    private void btnAtualizarLabinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtualizarLabinActionPerformed
+        // TODO add your handling code here:
+        
+         String idLabin = txtIDLabin.getText();
+      String NomeLabin = txtNomeLabin.getText();
+       String LocalLabin = txtLocalLabin.getText();
+        
+       
+       JOptionPane.showMessageDialog(this, "Laboratorio criado com Sucesso!\n" +
+        "ID Labin: " + idLabin +
+        "\nNome Labin: " + NomeLabin +
+        "\nLocal Labin: " + LocalLabin );
+       
+       limparCampos();
+
+    }//GEN-LAST:event_btnAtualizarLabinActionPerformed
+
+    private void btnExcluirLabinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirLabinActionPerformed
+        // TODO add your handling code here:
+        
+         String idLabin = txtIDLabin.getText();
+      String NomeLabin = txtNomeLabin.getText();
+       String LocalLabin = txtLocalLabin.getText();
+        
+       
+       JOptionPane.showMessageDialog(this, "Laboratorio criado com Sucesso!\n" +
+        "ID Labin: " + idLabin +
+        "\nNome Labin: " + NomeLabin +
+        "\nLocal Labin: " + LocalLabin );
+       
+       limparCampos();
+
+    }//GEN-LAST:event_btnExcluirLabinActionPerformed
+
+    
+    private void limparCampos(){
+    txtIDLabin.setText("");
+    txtLocalLabin.setText("");
+    txtNomeLabin.setText("");
+    
+    }
+    
     /**
      * @param args the command line arguments
      */

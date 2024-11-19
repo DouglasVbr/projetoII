@@ -45,7 +45,7 @@ public class TelaPrincipalView extends javax.swing.JFrame {
         SubMenuManutencaoPecas = new javax.swing.JMenuItem();
         SubMenuManutencaoMaquinas = new javax.swing.JMenuItem();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
 
         MenuMaquinas.setText("Maquinas");
