@@ -2,69 +2,81 @@
 package DTO;
 
 
+
+
 public class MaquinaDTO {
     private int idMaquina;
     private String numeroSerie;
-    private String modelo;
-    private String processador;
-    private String memoriaRam;
-    private String armazenamento;
+    private String especificacoes;
     private String dataAquisicao;
+    private String localizacao;
     private String status;
-    private int idLaboratorio;
-    private String Nome;
-    private String Descricao;
+    private String ram;
+    private String armazenamento;
+    private String cpu;
 
-    // Getters e setters
-    
-    
-
-    public String getNome() {
-        return Nome;
+    // Construtor completo
+    public MaquinaDTO(int idMaquina, String numeroSerie, String especificacoes, String dataAquisicao, String localizacao, String status) {
+        this.idMaquina = idMaquina;
+        this.numeroSerie = numeroSerie;
+        this.especificacoes = especificacoes;
+        this.dataAquisicao = dataAquisicao;
+        this.localizacao = localizacao;
+        this.status = status;
     }
 
-    public void setNome(String Nome) {
-        this.Nome = Nome;
+    public MaquinaDTO(int idMaquina, String numeroSerie, String especificacoes, String dataAquisicao, String localizacao, String status, String ram, String armazenamento, String cpu) {
+        this.idMaquina = idMaquina;
+        this.numeroSerie = numeroSerie;
+        this.especificacoes = especificacoes;
+        this.dataAquisicao = dataAquisicao;
+        this.localizacao = localizacao;
+        this.status = status;
+        this.ram = ram;
+        this.armazenamento = armazenamento;
+        this.cpu = cpu;
     }
 
-    public String getDescricao() {
-        return Descricao;
+    public MaquinaDTO() {
+        throw new UnsupportedOperationException("Not supported yet."); 
     }
 
-    public void setDescricao(String Descricao) {
-        this.Descricao = Descricao;
+    public String getRam() {
+        return ram;
     }
-    
-    
-    
+
+    public void setRam(String ram) {
+        this.ram = ram;
+    }
+
+    public String getArmazenamento() {
+        return armazenamento;
+    }
+
+    public void setArmazenamento(String armazenamento) {
+        this.armazenamento = armazenamento;
+    }
+
+    public String getCpu() {
+        return cpu;
+    }
+
+    public void setCpu(String cpu) {
+        this.cpu = cpu;
+    }
+
+    // Getters e Setters
     public int getIdMaquina() { return idMaquina; }
     public void setIdMaquina(int idMaquina) { this.idMaquina = idMaquina; }
-    
     public String getNumeroSerie() { return numeroSerie; }
     public void setNumeroSerie(String numeroSerie) { this.numeroSerie = numeroSerie; }
-    
-    public String getModelo() { return modelo; }
-    public void setModelo(String modelo) { this.modelo = modelo; }
-    
-    public String getProcessador() { return processador; }
-    public void setProcessador(String processador) { this.processador = processador; }
-    
-    public String getMemoriaRam() { return memoriaRam; }
-    public void setMemoriaRam(String memoriaRam) { this.memoriaRam = memoriaRam; }
-    
-    public String getArmazenamento() { return armazenamento; }
-    public void setArmazenamento(String armazenamento) { this.armazenamento = armazenamento; }
-    
+    public String getEspecificacoes() { return especificacoes; }
+    public void setEspecificacoes(String especificacoes) { this.especificacoes = especificacoes; }
     public String getDataAquisicao() { return dataAquisicao; }
     public void setDataAquisicao(String dataAquisicao) { this.dataAquisicao = dataAquisicao; }
-    
+    public String getLocalizacao() { return localizacao; }
+    public void setLocalizacao(String localizacao) { this.localizacao = localizacao; }
     public String getStatus() { return status; }
     public void setStatus(String status) { this.status = status; }
-    
-    public int getIdLaboratorio() { return idLaboratorio; }
-    public void setIdLaboratorio(int idLaboratorio) { this.idLaboratorio = idLaboratorio; }
 }
-
-
-    
 

@@ -1,44 +1,75 @@
+
 package DAO;
 
-import DTO.LaboratorioDTO;
-import java.sql.*;
+
+
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JOptionPane;
+import DTO.LaboratorioDTO;
+import DAO.ConexaoDAO;
 
 public class LaboratorioDAO {
-    public void adicionarLaboratorio(LaboratorioDTO laboratorio) {
-        String sql = "INSERT INTO laboratorio (nome, localizacao) VALUES (?, ?)";
-
-        try (Connection conn = ConexaoDAO.conectar();
+    
+    public void criarLaboratorio(LaboratorioDTO lab) {
+        String sql = "INSERT INTO laboratorios (nome, localizacao) VALUES (?, ?)";
+        try (Connection conn = ConexaoDAO.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
-
-            stmt.setString(1, laboratorio.getNome());
-            stmt.setString(2, laboratorio.getLocalizacao());
+            stmt.setString(1, lab.getNome());
+            stmt.setString(2, lab.getLocalizacao());
             stmt.executeUpdate();
-
+            JOptionPane.showMessageDialog(null, "Laboratório criado com sucesso!");
         } catch (SQLException e) {
-            System.out.println("Erro ao adicionar laboratório: " + e.getMessage());
+            JOptionPane.showMessageDialog(null, "Erro ao criar laboratório: " + e.getMessage());
         }
     }
-
-    public List<LaboratorioDTO> listarLaboratorios() {
+    
+    public List<LaboratorioDTO> lerLaboratorios() {
+        String sql = "SELECT * FROM laboratorios";
         List<LaboratorioDTO> laboratorios = new ArrayList<>();
-        String sql = "SELECT * FROM laboratorio";
-
-        try (Connection conn = ConexaoDAO.conectar();
-             Statement stmt = conn.createStatement();
-             ResultSet rs = stmt.executeQuery(sql)) {
-
+        try (Connection conn = ConexaoDAO.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql);
+             ResultSet rs = stmt.executeQuery()) {
             while (rs.next()) {
-                LaboratorioDTO laboratorio = new LaboratorioDTO();
-                laboratorio.setIdLaboratorio(rs.getInt("id"));
-                laboratorio.setNome(rs.getString("nome"));
-                laboratorio.setLocalizacao(rs.getString("localizacao"));
-                laboratorios.add(laboratorio);
+                LaboratorioDTO lab = new LaboratorioDTO(rs.getInt("id_laboratorio"), rs.getString("nome"), rs.getString("localizacao"));
+                laboratorios.add(lab);
             }
         } catch (SQLException e) {
-            System.out.println("Erro ao listar laboratórios: " + e.getMessage());
+            JOptionPane.showMessageDialog(null, "Erro ao ler laboratórios: " + e.getMessage());
         }
         return laboratorios;
     }
+    
+    public void atualizarLaboratorio(LaboratorioDTO lab) {
+        String sql = "UPDATE laboratorios SET nome = ?, localizacao = ? WHERE id_laboratorio = ?";
+        try (Connection conn = ConexaoDAO.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, lab.getNome());
+            stmt.setString(2, lab.getLocalizacao());
+            stmt.setInt(3, lab.getIdLaboratorio());
+            stmt.executeUpdate();
+            JOptionPane.showMessageDialog(null, "Laboratório atualizado com sucesso!");
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "Erro ao atualizar laboratório: " + e.getMessage());
+        }
+    }
+    
+    public void excluirLaboratorio(int id) {
+        String sql = "DELETE FROM laboratorios WHERE id_laboratorio = ?";
+        try (Connection conn = ConexaoDAO.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1, id);
+            stmt.executeUpdate();
+            JOptionPane.showMessageDialog(null, "Laboratório excluído com sucesso!");
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "Erro ao excluir laboratório: " + e.getMessage());
+        }
+    }
 }
+
+

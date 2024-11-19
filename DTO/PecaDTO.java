@@ -1,51 +1,33 @@
 
 package DTO;
 
-public class PecaDTO {
-    private int id;
-    private String nome;
-    private String descricao;
-    private int idMaquina;
 
-    // Construtor
-    public PecaDTO(int id, String nome, String descricao, int idMaquina) {
-        this.id = id;
-        this.nome = nome;
-        this.descricao = descricao;
-        this.idMaquina = idMaquina;
+public class PecaDTO {
+    private int idPeca;
+    private String tipo;
+    private String fabricante;
+    private String numeroSerie;
+    private int quantidade;
+
+    // Construtor completo
+    public PecaDTO(int idPeca, String tipo, String fabricante, String numeroSerie, int quantidade) {
+        this.idPeca = idPeca;
+        this.tipo = tipo;
+        this.fabricante = fabricante;
+        this.numeroSerie = numeroSerie;
+        this.quantidade = quantidade;
     }
 
     // Getters e Setters
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-
-    public int getIdMaquina() {
-        return idMaquina;
-    }
-
-    public void setIdMaquina(int idMaquina) {
-        this.idMaquina = idMaquina;
-    }
+    public int getIdPeca() { return idPeca; }
+    public void setIdPeca(int idPeca) { this.idPeca = idPeca; }
+    public String getTipo() { return tipo; }
+    public void setTipo(String tipo) { this.tipo = tipo; }
+    public String getFabricante() { return fabricante; }
+    public void setFabricante(String fabricante) { this.fabricante = fabricante; }
+    public String getNumeroSerie() { return numeroSerie; }
+    public void setNumeroSerie(String numeroSerie) { this.numeroSerie = numeroSerie; }
+    public int getQuantidade() { return quantidade; }
+    public void setQuantidade(int quantidade) { this.quantidade = quantidade; }
 }
 

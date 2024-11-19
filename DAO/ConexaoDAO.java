@@ -1,32 +1,41 @@
+
 package DAO;
+
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConexaoDAO {
-    private static final String URL = "jdbc:mysql://localhost:3306/gerenciador_hardware";
-    private static final String USER = "root";
-    private static final String PASSWORD = "";
+    // Configurações do banco de dados
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/gerenciador_hardware"; 
+    private static final String USER = "root"; 
+    private static final String PASSWORD = ""; 
 
-    public static Connection conectar() throws SQLException {
+    // Método para obter conexão com o banco de dados
+    public static Connection getConnection() {
+        Connection connection = null;
         try {
-            return DriverManager.getConnection(URL, USER, PASSWORD);
+            connection = DriverManager.getConnection(DB_URL, USER, PASSWORD);
+            System.out.println("Conexão com o banco de dados estabelecida com sucesso.");
         } catch (SQLException e) {
-            System.out.println("Erro ao conectar ao banco de dados: " + e.getMessage());
-            throw e;
+            System.out.println("Erro ao conectar ao banco de dados.");
+            e.printStackTrace();
         }
+        return connection;
     }
 
-    public static void desconectar(Connection conn) {
-        if (conn != null) {
+    // Método para fechar a conexão com o banco de dados
+    public static void closeConnection(Connection connection) {
+        if (connection != null) {
             try {
-                conn.close();
+                connection.close();
+                System.out.println("Conexão com o banco de dados encerrada.");
             } catch (SQLException e) {
-                System.out.println("Erro ao desconectar do banco de dados: " + e.getMessage());
+                System.out.println("Erro ao fechar a conexão com o banco de dados.");
+                e.printStackTrace();
             }
         }
     }
 }
-
 

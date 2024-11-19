@@ -2,49 +2,67 @@
 package DAO;
 
 
-
 import DTO.PecaDTO;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+  
 public class PecaDAO {
-    public void adicionarPeca(PecaDTO peca) {
-        String sql = "INSERT INTO peca (nome, descricao, idMaquina) VALUES (?, ?, ?)";
 
-        try (Connection conn = ConexaoDAO.conectar();
-             PreparedStatement stmt = conn.prepareStatement(sql)) {
+    public static PecaDTO pesquisarUsuario(int idPecas) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    private final String url = "jdbc:mysql://localhost:3306/gerenciador_hardware";
+    private final String user = "root"; 
+    private final String password = ""; 
 
-            stmt.setString(1, peca.getNome());
-            stmt.setString(2, peca.getDescricao());
-            stmt.setInt(3, peca.getIdMaquina());
+    // Método para criar uma peça
+    public void criarPeca(String nome, int quantidade) throws SQLException {
+        String query = "INSERT INTO pecas (tipo, quantidade_estoque) VALUES (?, ?)";
+        try (Connection con = DriverManager.getConnection(url, user, password);
+             PreparedStatement stmt = con.prepareStatement(query)) {
+            stmt.setString(1, nome);
+            stmt.setInt(2, quantidade);
             stmt.executeUpdate();
-
-        } catch (SQLException e) {
-            System.out.println("Erro ao adicionar peça: " + e.getMessage());
         }
     }
 
-    public List<PecaDTO> listarPecas(PecaDTO peca ) {
-        List<PecaDTO> pecas = new ArrayList<>();
-        String sql = "SELECT * FROM peca";
-
-        try (Connection conn = ConexaoDAO.conectar();
-             Statement stmt = conn.createStatement();
-             ResultSet rs = stmt.executeQuery(sql)) {
-
+    // Método para ler todas as peças
+    public List<String> lerPecas() throws SQLException {
+        String query = "SELECT * FROM pecas";
+        List<String> pecas = new ArrayList<>();
+        try (Connection con = DriverManager.getConnection(url, user, password);
+             Statement stmt = con.createStatement();
+             ResultSet rs = stmt.executeQuery(query)) {
             while (rs.next()) {
-                
-                peca.setId(rs.getInt("id"));
-                peca.setNome(rs.getString("nome"));
-                peca.setDescricao(rs.getString("descricao"));
-                peca.setIdMaquina(rs.getInt("idMaquina"));
-                pecas.add(peca);
+                pecas.add("ID: " + rs.getInt("id_peca") + ", Nome: " + rs.getString("tipo") + ", Quantidade: " + rs.getInt("quantidade_estoque"));
             }
-        } catch (SQLException e) {
-            System.out.println("Erro ao listar peças: " + e.getMessage());
         }
         return pecas;
     }
+
+    // Método para atualizar uma peça
+    public void atualizarPeca(int id, String nome, int quantidade) throws SQLException {
+        String query = "UPDATE pecas SET tipo = ?, quantidade_estoque = ? WHERE id_peca = ?";
+        try (Connection con = DriverManager.getConnection(url, user, password);
+             PreparedStatement stmt = con.prepareStatement(query)) {
+            stmt.setString(1, nome);
+            stmt.setInt(2, quantidade);
+            stmt.setInt(3, id);
+            stmt.executeUpdate();
+        }
+    }
+
+    // Método para excluir uma peça
+    public void excluirPeca(int id) throws SQLException {
+        String query = "DELETE FROM pecas WHERE id_peca = ?";
+        try (Connection con = DriverManager.getConnection(url, user, password);
+             PreparedStatement stmt = con.prepareStatement(query)) {
+            stmt.setInt(1, id);
+            stmt.executeUpdate();
+        }
+    }
 }
+
 
